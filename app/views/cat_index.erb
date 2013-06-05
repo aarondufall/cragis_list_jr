@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Welcome to Shiz-list!</h1>
+  <br>
+    <h2><%= @category.name.capitalize %></h2>
+    <ul>
+      <% @posts.each do |post| %>
+        <li><a href="/posts/<%= post.id %>"><%= post.name %></a></li>
+      <% end %>
+    <ul>
+</div>

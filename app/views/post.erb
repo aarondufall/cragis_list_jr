@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Welcome to Shiz-list!</h1>
+  <br>
+    <h2>
+      <%= @post.name %>
+    </h2>
+    <ul>
+      <li><a href="/posts/edit/?key=<%= @post.secret_key %>">Edit Post</a></li>
+      <li><%= @post.price %></li>
+      <li><%= @post.email %></li>
+      <li><%= @post.location %></li>
+    </ul>
+</div>
