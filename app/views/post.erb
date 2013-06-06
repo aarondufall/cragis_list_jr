@@ -1,13 +1,12 @@
 <div class="container">
-  <h1>Welcome to Shiz-list!</h1>
-  <br>
+  <h1>Welcome to CloneList!</h1>
     <h2>
       <%= @post.name %>
     </h2>
     <ul>
-      <li><a href="/posts/edit/?key=<%= @post.secret_key %>">Edit Post</a></li>
-      <li><%= @post.price %></li>
-      <li><%= @post.email %></li>
-      <li><%= @post.location %></li>
+      <li>PRICE:  $<%= @post.price.round(2) %></li>
+      <li>EMAIL:   <%= @post.email %></li>
+      <li>ZIPCODE: <%= @post.location %></li>
+      <li><a href="/posts/edit/<%= @post.secret_key %>">Edit Post</a></li>
     </ul>
 </div>

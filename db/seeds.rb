@@ -1,5 +1,3 @@
-
-
 categories = ["Personals","For Sale","Jobs","Community","Housing"]
 
 categories.each do |category|

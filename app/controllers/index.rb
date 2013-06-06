@@ -14,12 +14,12 @@ get '/posts/:id' do
   erb :post
 end
 
-get '/posts/edit/' do
+get '/posts/edit/:key' do
  @post = Post.find_by_secret_key(params[:key])
  erb :edit_post
 end
 
-post '/posts/edit' do
+post '/posts/edit/:key' do
   @post = Post.find_by_secret_key(params[:key])
   @post.update_attributes(params[:post])
   redirect "/posts/#{@post.id}"
